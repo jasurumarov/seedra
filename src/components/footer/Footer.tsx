@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer: React.FC = () => {
     return (
-        <footer>
-            <h2>Footer</h2>
+        <footer className='shadow-shadowHeader'>
+            <h2></h2>
         </footer>
     )
 }

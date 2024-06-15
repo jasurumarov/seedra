@@ -22,7 +22,8 @@ export default {
         colorGreen: "#359740"
       },
       boxShadow: {
-        shadowHeader: '0px 4px 12px 0px #CFCFCF40'
+        shadowHeader: '0px 4px 12px 0px #CFCFCF40',
+        shadowFooter: '0px -7px 80px 0px #BDBDBD40',
       },
     },
     fontFamily: {
