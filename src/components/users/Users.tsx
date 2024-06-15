@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
+// import axios from 'axios'
 
-const API_URL: string = "https://dummyjson.com"
+// const API_URL: string = "https://dummyjson.com"
 
 const Users: React.FC = () => {
-    const [usersData, setUsersData] = useState<null>(null)
 
-    useEffect(() => {
-        axios.get(`${API_URL}/users`)
-            .then((res) => console.log(res.data.users))
-    }, [])
+    // useEffect(() => {
+    //     axios.get(`${API_URL}/users`)
+    //         .then((res) => console.log(res.data.users))
+    // }, [])
     return (
         <section>
             <div className="container">
