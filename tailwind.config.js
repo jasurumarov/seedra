@@ -24,6 +24,7 @@ export default {
       boxShadow: {
         shadowHeader: '0px 4px 12px 0px #CFCFCF40',
         shadowFooter: '0px -7px 80px 0px #BDBDBD40',
+        shadowMenu: '0 3px 5px #0002',
       },
     },
     fontFamily: {

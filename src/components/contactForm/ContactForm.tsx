@@ -15,10 +15,15 @@ const ContactForm: React.FC = () => {
         const email = formData.get('email') as string
         const message = formData.get('message') as string
 
-        console.log({ name, email, message })
+        if (name.trim() && email.trim() && message.trim()) {
+            console.log({ name, email, message })
+            const formElement = e.currentTarget as HTMLFormElement
+            formElement.reset()
+        } else {
+            window.confirm("Input can't be empty")
+        }
 
-        const formElement = e.currentTarget as HTMLFormElement
-        formElement.reset()
+
     }
 
 

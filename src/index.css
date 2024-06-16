@@ -28,7 +28,9 @@
 
 .hero {
     background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
+
 .contact {
     background-repeat: no-repeat !important;
     background-size: cover !important;
