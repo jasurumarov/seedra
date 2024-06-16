@@ -22,6 +22,10 @@
     src: url('./fonts/Lexend-Bold.ttf');
 }
 
+* {
+    scroll-behavior: smooth !important;
+}
+
 .container {
     max-width: 1142px;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // Icons
@@ -10,12 +10,27 @@ import { FaRegHeart } from 'react-icons/fa'
 import { RiShoppingCart2Line } from 'react-icons/ri'
 import { HiOutlineMenu } from 'react-icons/hi'
 
-
-
 const Header: React.FC = () => {
     let [menu, setMenu] = useState<boolean>(false)
+    const [shrink, setShrink] = useState<boolean>(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setShrink(true)
+            } else {
+                setShrink(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
     return (
-        <header className='z-10 sticky top-0 bg-white font-lexand py-7 md:py-4 shadow-shadowHeader'>
+        <header className={`z-10 sticky top-0 bg-white font-lexand duration-200 shadow-shadowHeader ${shrink ? 'py-7 md:py-4 ' : 'py-10 md:py-7'}`}>
             <div className="container">
                 <nav className='flex items-center justify-between gap-5'>
                     <Link to={'/'}>
