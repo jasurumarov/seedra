@@ -16,7 +16,7 @@ const Story: React.FC = () => {
                         <p className='mb-6'>&nbsp;  Your easy growing experience is our guarantee <br /> Spinach commom culinary uses: salads, soups, smoothies, lasagne, pizza, pies, risotto, and more</p>
                         <p>&nbsp;  Proudly sourced in the USA - our garden seeds are grown, harvested, and packaged in the USA. We support local farmers and are happy to produce this American-made product</p>
                     </div>
-                    <img className='-mr-32' width={620} src={StoryImg1} alt="story image" />
+                    <img className='m-0 xl:-mr-32' width={620} src={StoryImg1} alt="story image" />
                 </article>
                 <article className='mb-15 flex flex-wrap items-center justify-between'>
                     <img src={StoryImg2} alt="story image" />

@@ -6,19 +6,34 @@
     font-family: 'Lexand';
     src: url('./fonts/Lexend-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Lexand500';
     src: url('./fonts/Lexend-Medium.ttf');
 }
+
 @font-face {
     font-family: 'Lexand600';
     src: url('./fonts/Lexend-SemiBold.ttf');
 }
+
 @font-face {
     font-family: 'Lexand700';
     src: url('./fonts/Lexend-Bold.ttf');
 }
 
+.container {
+    max-width: 1142px;
+}
+
 .hero {
     background-repeat: no-repeat !important;
+}
+.contact {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #359740 !important;
 }

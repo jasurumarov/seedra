@@ -1,9 +1,10 @@
 import React from 'react'
+import ContactForm from '../../components/contactForm/ContactForm'
 
 const Contact: React.FC = () => {
     return (
         <main>
-            <h2>Contact</h2>
+            <ContactForm/>
         </main>
     )
 }
