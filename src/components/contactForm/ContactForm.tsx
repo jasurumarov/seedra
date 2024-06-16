@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react'
+import React, { FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 
 // Images
@@ -16,12 +16,12 @@ const ContactForm: React.FC = () => {
         const message = formData.get('message') as string
 
         console.log({ name, email, message })
-        
+
         const formElement = e.currentTarget as HTMLFormElement
         formElement.reset()
     }
 
-    
+
 
     return (
         <section className='mt-14 mb-20'>
@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
                     <form onSubmit={handleSubmit} className='max-w-[1000px] lg:max-w-[536px] w-full bg-white rounded-[29px] py-[26px] px-8'>
                         <div className='flex flex-col gap-[4px] mb-5'>
                             <label htmlFor="name" className='font-lexand text-[#70737C] text-sm'>Name</label>
-                            <input required  id='name' type="name" name='name' placeholder='Your name' className='w-full h-14 px-6 rounded-md text-colorBlack outline-none border border-[#EFEFEF] border-solid' />
+                            <input required id='name' type="name" name='name' placeholder='Your name' className='w-full h-14 px-6 rounded-md text-colorBlack outline-none border border-[#EFEFEF] border-solid' />
                         </div>
                         <div className='flex flex-col gap-[4px] mb-5'>
                             <label htmlFor="email" className='font-lexand text-[#70737C] text-sm'>Email</label>
