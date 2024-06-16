@@ -8,9 +8,9 @@ import Users from '../../components/users/Users'
 const Home: React.FC = () => {
     return (
         <main>
-            <Hero />
-            <Story/>
-            <Users/>
+            <Hero  />
+            <Story />
+            <Users />
         </main>
     )
 }

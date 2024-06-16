@@ -1,4 +1,7 @@
 import React from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css';
+Aos.init()
 
 // Images
 import StoryImg1 from '../../assets/images/story-img1.jpg'
@@ -8,7 +11,7 @@ const Story: React.FC = () => {
     return (
         <section className='mt-11 mb-28'>
             <div className="container">
-                <article className='mb-15 flex gap-5 flex-wrap items-center justify-center xl:justify-between'>
+                <article data-aos={"fade-right"} className='mb-15 flex gap-5 flex-wrap items-center justify-center xl:justify-between'>
                     <div className='max-w-[561px]'>
                         <h2 className='mb-[31px] font-lexand600 text-[22px] md:text-[36px] tracking-[-5%] text-colorBlack'>Seedra helps to grow fast and efficiant</h2>
                         <p className='text-colorBlack mb-6'>SEEDRA Spinach Seeds - contains 600 seeds in 2 Packs and professional instructions created by PhD Helga George</p>
@@ -18,7 +21,7 @@ const Story: React.FC = () => {
                     </div>
                     <img className='w-[620px] m-0 xl:-mr-32' src={StoryImg1} alt="story image" />
                 </article>
-                <article className='mb-15 flex gap-5 flex-wrap items-center justify-center xl:justify-between'>
+                <article data-aos={"zoom-in-up"} data-aos-duration="600" data-aos-anchor-placement="top-center" className='mt-6 mb-15 flex gap-5 flex-wrap items-center justify-center xl:justify-between'>
                     <img src={StoryImg2} alt="story image" />
                     <div className='max-w-[501px] xl:order-1 -order-1'>
                         <h2 className='mb-[31px] font-lexand600 text-[22px] md:text-[36px] tracking-[-5%] text-colorBlack'>Our story</h2>

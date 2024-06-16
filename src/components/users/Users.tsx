@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
+// Aos
+import Aos from 'aos'
+import 'aos/dist/aos.css';
+Aos.init()
+
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
@@ -40,7 +45,7 @@ const Users: React.FC = () => {
     ))
     return (
         <section className='mb-20'>
-            <div className="container">
+            <div data-aos={"zoom-in-up"} data-aos-duration="600" data-aos-anchor-placement="top-center" className="container">
                 <h2 className='font-lexand600 text-[28px] sm:text-[36px] text-colorBlack tracking-[5%] text-center mb-8'>Meet our team</h2>
                 <Swiper
                     slidesPerView={2}

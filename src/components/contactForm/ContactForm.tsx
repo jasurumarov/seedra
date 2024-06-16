@@ -1,6 +1,11 @@
 import React, { FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 
+// Aos
+import Aos from 'aos'
+import 'aos/dist/aos.css';
+Aos.init()
+
 // Images
 import ContactBg from '../../assets/images/contact-bg.png'
 import { BiSolidPhoneCall } from 'react-icons/bi'
@@ -29,7 +34,7 @@ const ContactForm: React.FC = () => {
 
 
     return (
-        <section className='mt-14 mb-20'>
+        <section data-aos={'fade-right'} className='mt-14 mb-20'>
             <div className="container">
                 <div className='contact rounded-[50px] overflow-hidden py-8 lg:pl-14 md:pl-10 md:pr-10 pl-6 pr-6 flex flex-wrap items-center justify-between gap-5' style={{ background: `url(${ContactBg})` }}>
                     <div className='flex flex-wrap items-center  lg:flex-col gap-6 lg:gap-40'>
