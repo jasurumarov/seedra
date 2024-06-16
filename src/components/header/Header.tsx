@@ -13,7 +13,7 @@ import { RiShoppingCart2Line } from 'react-icons/ri'
 
 const Header: React.FC = () => {
     return (
-        <header className='font-lexand py-4 shadow-shadowHeader'>
+        <header className='sticky top-0 bg-white font-lexand py-4 shadow-shadowHeader'>
             <div className="container">
                 <nav className='flex items-center justify-between gap-5'>
                     <Link to={'/'}>

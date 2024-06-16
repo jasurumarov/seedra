@@ -23,7 +23,7 @@ const Users: React.FC = () => {
     }, [])
     
     let users: JSX.Element[] | undefined = usersData?.map((user: UserSchema) => (
-        <div key={user.id} className='hover:shadow-shadowHeader rounded-xl overflow-hidden pb-5'>
+        <div key={user.id} className='hover:shadow-shadowHeader duration-200 rounded-xl overflow-hidden pb-5'>
             <div className='overflow-hidden w-[255px] h-[255px]'>
                 <img className='w-[255px] overflow-hidden h-[255px] mb-4 duration-200 hover:scale-[1.02]' src={user.image} alt='user image' />
             </div>
@@ -32,7 +32,7 @@ const Users: React.FC = () => {
         </div>
     ))
     return (
-        <section>
+        <section className='mb-20'>
             <div className="container">
                 <h2 className='font-lexand600 text-[36px] text-colorBlack tracking-[5%] text-center mb-16'>Meet our team</h2>
                 <div className='flex flex-wrap gap-[30px]'>
