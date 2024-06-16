@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ChangeEvent, FormEvent, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // Images
@@ -7,6 +7,22 @@ import { BiSolidPhoneCall } from 'react-icons/bi'
 import { IoMdMail } from 'react-icons/io'
 
 const ContactForm: React.FC = () => {
+
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        const formData = new FormData(e.currentTarget)
+        const name = formData.get('name') as string
+        const email = formData.get('email') as string
+        const message = formData.get('message') as string
+
+        console.log({ name, email, message })
+        
+        const formElement = e.currentTarget as HTMLFormElement
+        formElement.reset()
+    }
+
+    
+
     return (
         <section className='mt-14 mb-20'>
             <div className="container">
@@ -32,18 +48,18 @@ const ContactForm: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <form className='max-w-[1000px] lg:max-w-[536px] w-full bg-white rounded-[29px] py-[26px] px-8'>
+                    <form onSubmit={handleSubmit} className='max-w-[1000px] lg:max-w-[536px] w-full bg-white rounded-[29px] py-[26px] px-8'>
                         <div className='flex flex-col gap-[4px] mb-5'>
                             <label htmlFor="name" className='font-lexand text-[#70737C] text-sm'>Name</label>
-                            <input id='name' type="name" placeholder='Your name' className='w-full h-14 px-6 rounded-md text-colorBlack outline-none border border-[#EFEFEF] border-solid' />
+                            <input required  id='name' type="name" name='name' placeholder='Your name' className='w-full h-14 px-6 rounded-md text-colorBlack outline-none border border-[#EFEFEF] border-solid' />
                         </div>
                         <div className='flex flex-col gap-[4px] mb-5'>
-                            <label htmlFor="email" className='font-lexand text-[#70737C] text-sm'>Name</label>
-                            <input id='email' type="email" placeholder='Your email' className='w-full h-14 px-6 rounded-md text-colorBlack outline-none border border-[#EFEFEF] border-solid' />
+                            <label htmlFor="email" className='font-lexand text-[#70737C] text-sm'>Email</label>
+                            <input required id='email' type="email" name='email' placeholder='Your email' className='w-full h-14 px-6 rounded-md text-colorBlack outline-none border border-[#EFEFEF] border-solid' />
                         </div>
                         <div className='flex flex-col gap-[4px] mb-3.5'>
                             <label htmlFor="message" className='font-lexand text-[#70737C] text-sm'>Message</label>
-                            <textarea name="message" id="message" placeholder='Your message' rows={4} className='w-full py-3.5 resize-none px-6 rounded-md text-colorBlack outline-none border border-[#EFEFEF] border-solid'></textarea>
+                            <textarea required name="message" id="message" placeholder='Your message' rows={4} className='w-full py-3.5 resize-none px-6 rounded-md text-colorBlack outline-none border border-[#EFEFEF] border-solid'></textarea>
                         </div>
                         <div className='flex flex-wrap sm:flex-nowrap items-center gap-5'>
                             <button className='w-full sm:w-[160px] h-[51px] flex items-center justify-center bg-colorGreen rounded-lg text-white font-lexand duration-200 active:scale-[0.97]'>Send request</button>
